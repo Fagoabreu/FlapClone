@@ -17,10 +17,14 @@ public class LogicScript : MonoBehaviour
     }
 
     public void restartGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        loadLevel(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver() {
         gameOverScreen.SetActive(true);
+    }
+
+    public void loadLevel(string LevelName) {
+        SceneManager.LoadScene(LevelName);
     }
 }
